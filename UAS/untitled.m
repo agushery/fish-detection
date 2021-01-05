@@ -104,9 +104,9 @@ jumlahIkan = length(B);
 figure,
 for k = 1 : jumlahIkan
     thisFishBoundingBox = pengukuranIkan(k).BoundingBox;
-    fish.k = insertObjectAnnotation(img_rgb, 'Rectangle', thisFishBoundingBox, 'Fish');
-    imshow(fish.k);
+    img_rgb = insertObjectAnnotation(img_rgb, 'Rectangle', thisFishBoundingBox, 'Fish');
 end
+imshow(img_rgb);
 n = k;
 str_n = num2str(n);
 set(handles.text5,'String', str_n);
